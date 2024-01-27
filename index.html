@@ -8,39 +8,48 @@
 
   <title>Frontend Mentor | Age calculator app</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="wrapper">
-    <form class="form-input">
-      <label for="day">DAY</label>
-      <div class="day">
-        <input type="number" name="day" placeholder="DD"/>
+    <form class="input-field">
+      <div class="input-section">
+        <label for="day">DAY</label>
+        <label class="red" for="day">DAY</label>
+        <div class="day">
+          <input type="number" name="day" placeholder="DD"/>
+          <p class="error hidden-1"><em>This field is required</em></p>
+        </div>
       </div>
-      <p><em>This field is required</em></p>
-      <label for="day">MONTH</label>
-      <div class="month">
-        <input type="number" name="month" placeholder="MM" />
+      <div class="input-section">
+        <label for="day">MONTH</label>
+        <label class="red" for="day">MONTH</label>
+        <div class="month">
+          <input type="number" name="month" placeholder="MM" />
+          <p class="error hidden-2"><em>This field is required</em></p>
+        </div>
       </div>
-      <p><em>This field is required</em></p>
-      <label for="day">YEAR</label>
-      <div class="year">
-        <input type="number" name="year" placeholder="YYYY" />
+      <div class="input-section">
+        <label for="day">YEAR</label>
+        <label class="red" for="day">YEAR</label>
+        <div class="year">
+          <input type="number" name="year" placeholder="YYYY" />
+          <p class="error hidden-3"><em>This field is required</em></p>
+        </div>
       </div>
-      <p><em>This field is required</em></p>
     </form>
-
-    <hr><button type="button"><img src="./assets/images/icon-arrow.svg"></button>
-    <h1>-- years</h1>
-    <h1>-- months</h1>
-    <h1>-- days</h1>
-
+    <div class="divider">
+      <hr>
+      <button type="button"><img src="./assets/images/icon-arrow.svg"></button>
+    </div>
+    <h1><span>--</span>years</h1>
+    <h1><span>--</span>months</h1>
+    <h1><span>--</span>days</h1>
   </div>
-
 </body>
 </html>
