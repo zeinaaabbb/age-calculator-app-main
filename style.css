@@ -101,6 +101,15 @@ button:active {
   display: inline-flex;
 }
 
+input:focus {
+  border: 3px solid var(--purple);
+}
+
+input {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
 .input-section {
   display: inline-block;
   margin: 10px;
