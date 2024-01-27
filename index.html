@@ -17,19 +17,23 @@
 <body>
 
   <div class="wrapper">
+    <label for="day">DAY</label>
+    <div class="day">
+      <input type="number" name="day" placeholder="DD"/>
+    </div>
+    <p><em>This field is required</em></p>
 
-    Day
-    DD
+    <label for="day">MONTH</label>
+    <div class="month">
+      <input type="number" name="month" placeholder="MM" />
+    </div>
+    <p><em>This field is required</em></p>
 
-    Month
-    MM
-
-    Year
-    YYYY
-
-    <input type="number" name="date" min="1" max="31" />
-    <input type="number" name="month" min="1" max="12" />
-    <input type="number" name="year" min="1900" max="9999" />
+    <label for="day">YEAR</label>
+    <div class="year">
+      <input type="number" name="year" placeholder="YYYY" />
+    </div>
+    <p><em>This field is required</em></p>
 
     <hr><button type="button"><img src="./assets/images/icon-arrow.svg"></button>
     <h1>-- years</h1>
@@ -38,10 +42,5 @@
 
   </div>
 
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
