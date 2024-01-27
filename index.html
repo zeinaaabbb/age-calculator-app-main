@@ -16,11 +16,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="wrapper">
     <form class="input-field">
       <div class="input-section">
         <label for="day">DAY</label>
+        <label class="red" for="day">DAY</label>
         <div class="day">
           <input type="number" name="day" placeholder="DD"/>
           <p class="error hidden-1"><em>This field is required</em></p>
@@ -28,6 +28,7 @@
       </div>
       <div class="input-section">
         <label for="day">MONTH</label>
+        <label class="red" for="day">MONTH</label>
         <div class="month">
           <input type="number" name="month" placeholder="MM" />
           <p class="error hidden-2"><em>This field is required</em></p>
@@ -35,15 +36,14 @@
       </div>
       <div class="input-section">
         <label for="day">YEAR</label>
+        <label class="red" for="day">YEAR</label>
         <div class="year">
           <input type="number" name="year" placeholder="YYYY" />
           <p class="error hidden-3"><em>This field is required</em></p>
         </div>
       </div>
     </form>
-
     <div class="divider">
-
       <hr>
       <button type="button"><img src="./assets/images/icon-arrow.svg"></button>
     </div>
@@ -51,6 +51,5 @@
     <h1><span>--</span>months</h1>
     <h1><span>--</span>days</h1>
   </div>
-
 </body>
 </html>
