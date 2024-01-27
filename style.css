@@ -93,7 +93,7 @@ button {
   width: 80px;
 }
 
-button:active {
+button:focus {
   background-color: var(--purple);
 }
 
