@@ -34,14 +34,52 @@ input[type=number] {
 
 body {
   background-color: var(--light-grey);
+  font-family: var(--ff-san-serif);
 }
 
 .wrapper {
-  width: 500px ;
-  height: 400px;
+  width: 600px ;
+  height: 450px;
   background-color: white;
   margin: auto;
   margin-top: 100px;
   padding: 20px;
   border-bottom-right-radius: 100px;
+}
+
+p {
+  color: var(--light-red);
+}
+
+label {
+  color: var(--smokey-grey);
+}
+
+h1 > span {
+  color: var(--purple);
+}
+
+h1 {
+  font-size: var(--fs-bold);
+  /* line-height: 1em; */
+}
+
+input {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-color: var(--light-grey);
+  cursor: pointer;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+button {
+  border-radius: 50%;
+  background-color: var(--purple);
+  padding: 15px;
+  cursor: pointer;
 }
