@@ -4,9 +4,9 @@ const btn = document.querySelector("button");
 const inputField = document.querySelector(".input-field");
 
 //Input elements
-const day = document.getElementById("input-1");
-const month = document.getElementById("input-2");
-const year = document.getElementById("input-3");
+const dayI = document.getElementById("input-1");
+const monthI = document.getElementById("input-2");
+const yearI = document.getElementById("input-3");
 
 //Output element
 const outputYears = document.getElementById("years");
@@ -43,16 +43,23 @@ const labelYear = document.getElementById("label-y");
     //   }
     // };
 
+    function IsEmpty() {
+      const formData = new FormData(document.form);
+      if (document.form.question.value == "") {
+        alert("empty");
+      }
+      return;
+    }
 
     form.addEventListener("submit" , (event) => {
       event.preventDefault()
-      const formData = new FormData(event.target);
-      const day = Object.fromEntries(formData).day;
-      const month = Object.fromEntries(formData).month;
-      const year = Object.fromEntries(formData).year;
-      // console.log(day);
-      // console.log(month);
-      // console.log(year);
+      if (!IsEmpty()) {
+        const formData = new FormData(event.target);
+        const day = Object.fromEntries(formData).day;
+        const month = Object.fromEntries(formData).month;
+        const year = Object.fromEntries(formData).year;
+      }
+
 
 });
 
