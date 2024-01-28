@@ -48,10 +48,20 @@ const labelYear = document.getElementById("label-y");
       event.preventDefault()
       const formData = new FormData(event.target);
       const day = Object.fromEntries(formData).day;
-      console.log(day);
       const month = Object.fromEntries(formData).month;
-      console.log(month);
       const year = Object.fromEntries(formData).year;
-      console.log(year);
+      // console.log(day);
+      // console.log(month);
+      // console.log(year);
 
 });
+
+//Getting current date
+
+const currentDate = new Date();
+console.log(currentDate);
+
+const currentDayOfMonth = currentDate.getDate();
+const currentMonth = currentDate.getMonth();
+const currentYear = currentDate.getFullYear();
+const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
