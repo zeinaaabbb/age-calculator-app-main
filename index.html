@@ -22,7 +22,7 @@
         <label for="day">DAY</label>
         <label class="red" for="day">DAY</label>
         <div class="day">
-          <input type="number" name="day" placeholder="DD"/>
+          <input id="input-1" type="number" name="day" placeholder="DD"/>
           <p class="error hidden-1"><em>This field is required</em></p>
         </div>
       </div>
@@ -30,7 +30,7 @@
         <label for="day">MONTH</label>
         <label class="red" for="day">MONTH</label>
         <div class="month">
-          <input type="number" name="month" placeholder="MM" />
+          <input id="input-2" type="number" name="month" placeholder="MM" />
           <p class="error hidden-2"><em>This field is required</em></p>
         </div>
       </div>
@@ -38,15 +38,15 @@
         <label for="day">YEAR</label>
         <label class="red" for="day">YEAR</label>
         <div class="year">
-          <input type="number" name="year" placeholder="YYYY" />
+          <input id="input-3" type="number" name="year" placeholder="YYYY" />
           <p class="error hidden-3"><em>This field is required</em></p>
         </div>
       </div>
+      <div class="divider">
+        <hr>
+        <button type="submit" type="button"><img src="./assets/images/icon-arrow.svg"></button>
+      </div>
     </form>
-    <div class="divider">
-      <hr>
-      <button type="button"><img src="./assets/images/icon-arrow.svg"></button>
-    </div>
     <h1><span id="years">--</span>years</h1>
     <h1><span id="months">--</span>months</h1>
     <h1><span id="days">--</span>days</h1>
