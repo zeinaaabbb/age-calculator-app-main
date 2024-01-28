@@ -50,15 +50,23 @@ p {
   color: var(--light-red);
 }
 
-label {
+#label-d,
+#label-m,
+#label-y, {
   color: var(--smokey-grey);
 }
 
-.red {
+/* Error red above text */
+
+.red-d,
+.red-m,
+.red-y  {
   color: var(--light-red);
 }
 
-.red {
+.red-d,
+.red-m,
+.red-y {
   display: none;
 }
 
