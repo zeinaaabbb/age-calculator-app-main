@@ -14,9 +14,9 @@ const outputMonths = document.getElementById("months");
 const outputDays = document.getElementById("days");
 
 //Error elements below
-const dayField = document.querySelector(".hidden-1");
-const monthField = document.querySelector(".hidden-2");
-const yearField = document.querySelector(".hidden-3");
+const dayField = document.querySelector(".error-1");
+const monthField = document.querySelector(".error-2");
+const yearField = document.querySelector(".error-3");
 
 //Error red above text
 const redErrorDay = document.querySelector(".red-d");
@@ -28,28 +28,51 @@ const labelDay = document.getElementById("label-d");
 const labelMonth = document.getElementById("label-m");
 const labelYear = document.getElementById("label-y");
 
-    // function correctDay(day) {
-    //   const lowerDay  = 1 ;
-    //   const upperDay = 32 ;
-
-    //   if (day >= lowerDay && day < upperDay) {
-    //     console.log(outputDays.innerText);
-    //     console.log(day.value);
-    //     outputDays.innerText = day.value.toString();
-    //   } else {
-    //     redErrorDay.classList.remove("red-d");
-    //     labelDay.style.display = "none";
-    //     return dayField.innerText
-    //   }
-    // };
-
     function IsEmpty() {
       const formData = new FormData(document.form);
-      if (document.form.question.value == "") {
-        alert("empty");
+      const day = formData.get("day");
+      const month = formData.get("month");
+      const year = formData.get("year");
+
+      if (!day || !month || !year) {
+        dayField.classList.remove("error-1")
+        monthField.classList.remove("error-2")
+        yearField.classList.remove("error-3")
+
+        labelDay.style.display = "none"
+        labelMonth.style.display = "none"
+        labelYear.style.display = "none"
+
+        redErrorDay.classList.remove("red-d");
+        redErrorMonth.classList.remove("red-m");
+        redErrorYear.classList.remove("red-y");
+
+        return true;
       }
-      return;
-    }
+  return false;
+}
+
+//Getting current date
+function calculateAge(day , month , year) {
+  const formData = new FormData(document.form);
+  const day = formData.get("day");
+  const month = formData.get("month");
+  const year = formData.get("year");
+
+  const currentDate = new Date();
+
+  const currentDayOfMonth = currentDate.getDate();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+  const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+  const year = currentYear - birthDate.getFullYear();
+  console.log(year);
+  const month = currentMonth - birthDate.getMonth();
+  console.log(month);
+  const dayOfMonth = currentDayOfMonth - birthDate.getDate();
+  console.log(dayOfMonth);
+}
 
     form.addEventListener("submit" , (event) => {
       event.preventDefault()
@@ -59,16 +82,5 @@ const labelYear = document.getElementById("label-y");
         const month = Object.fromEntries(formData).month;
         const year = Object.fromEntries(formData).year;
       }
-
-
+      calculateAge(day , month , year);
 });
-
-//Getting current date
-
-const currentDate = new Date();
-console.log(currentDate);
-
-const currentDayOfMonth = currentDate.getDate();
-const currentMonth = currentDate.getMonth();
-const currentYear = currentDate.getFullYear();
-const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

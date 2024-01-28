@@ -52,15 +52,15 @@ p {
 
 #label-d,
 #label-m,
-#label-y, {
-  color: var(--smokey-grey);
+#label-y {
+  color: black;
 }
 
 /* Error red above text */
 
 .red-d,
 .red-m,
-.red-y,  {
+.red-y  {
   color: var(--light-red);
 }
 
@@ -131,10 +131,8 @@ hr {
 }
 
 /* This field is required */
-.error {
+.error-1,
+.error-2,
+.error-3 {
   display: none;
-}
-
-.red {
-  color: var(--light-red);
 }
