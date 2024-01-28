@@ -50,15 +50,23 @@ p {
   color: var(--light-red);
 }
 
-label {
-  color: var(--smokey-grey);
+#label-d,
+#label-m,
+#label-y {
+  color: black;
 }
 
-.red {
+/* Error red above text */
+
+.red-d,
+.red-m,
+.red-y  {
   color: var(--light-red);
 }
 
-.red {
+.red-d,
+.red-m,
+.red-y {
   display: none;
 }
 
@@ -93,7 +101,7 @@ button {
   width: 80px;
 }
 
-button:active {
+button:focus {
   background-color: var(--purple);
 }
 
@@ -123,10 +131,8 @@ hr {
 }
 
 /* This field is required */
-.error {
+.error-1,
+.error-2,
+.error-3 {
   display: none;
-}
-
-.red {
-  color: var(--light-red);
 }

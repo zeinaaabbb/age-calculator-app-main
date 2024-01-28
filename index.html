@@ -19,37 +19,39 @@
   <div class="wrapper">
     <form class="input-field">
       <div class="input-section">
-        <label for="day">DAY</label>
-        <label class="red" for="day">DAY</label>
+        <label id="label-d" for="day">DAY</label>
+        <label class="red-d" for="input-1">DAY</label>
         <div class="day">
-          <input type="number" name="day" placeholder="DD"/>
-          <p class="error hidden-1"><em>This field is required</em></p>
+          <input id="input-1" type="number" name="day" placeholder="DD"/>
+          <p class="error-1 hidden-1"><em>This field is required</em></p>
         </div>
       </div>
       <div class="input-section">
-        <label for="day">MONTH</label>
-        <label class="red" for="day">MONTH</label>
+        <label id="label-m" for="month">MONTH</label>
+        <label class="red-m" for="input-2">MONTH</label>
         <div class="month">
-          <input type="number" name="month" placeholder="MM" />
-          <p class="error hidden-2"><em>This field is required</em></p>
+          <input id="input-2" type="number" name="month" placeholder="MM" />
+          <p class="error-2 hidden-2"><em>This field is required</em></p>
         </div>
       </div>
       <div class="input-section">
-        <label for="day">YEAR</label>
-        <label class="red" for="day">YEAR</label>
+        <label id="label-y" for="year">YEAR</label>
+        <label class="red-y" for="input-3">YEAR</label>
         <div class="year">
-          <input type="number" name="year" placeholder="YYYY" />
-          <p class="error hidden-3"><em>This field is required</em></p>
+          <input id="input-3" type="number" name="year" placeholder="YYYY" />
+          <p class="error-3 hidden-3"><em>This field is required</em></p>
         </div>
+      </div>
+      <div class="divider">
+        <hr>
+        <button type="submit" type="button"><img src="./assets/images/icon-arrow.svg"></button>
       </div>
     </form>
-    <div class="divider">
-      <hr>
-      <button type="button"><img src="./assets/images/icon-arrow.svg"></button>
-    </div>
-    <h1><span>--</span>years</h1>
-    <h1><span>--</span>months</h1>
-    <h1><span>--</span>days</h1>
+    <h1><span id="years">--</span>years</h1>
+    <h1><span id="months">--</span>months</h1>
+    <h1><span id="days">--</span>days</h1>
   </div>
+
+  <script src="./index.js"></script>
 </body>
 </html>
