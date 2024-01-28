@@ -14,14 +14,14 @@ const outputMonths = document.getElementById("months");
 const outputDays = document.getElementById("days");
 
 //Error elements below
-const dayField = document.getElementsByClassName("hidden-1");
-const monthField = document.getElementsByClassName("hidden-2");
-const yearField = document.getElementsByClassName("hidden-3");
+const dayField = document.querySelector(".hidden-1");
+const monthField = document.querySelector(".hidden-2");
+const yearField = document.querySelector(".hidden-3");
 
 //Error red above text
-const redErrorDay = document.getElementsByClassName("red-d");
-const redErrorMonth = document.getElementsByClassName("red-m");
-const redErrorYear = document.getElementsByClassName("red-y");
+const redErrorDay = document.querySelector(".red-d");
+const redErrorMonth = document.querySelector(".red-m");
+const redErrorYear = document.querySelector(".red-y");
 
 //label
 const labelDay = document.getElementById("label-d");
