@@ -28,6 +28,8 @@ const labelDay = document.getElementById("label-d");
 const labelMonth = document.getElementById("label-m");
 const labelYear = document.getElementById("label-y");
 
+let day, month, year;
+
     function IsEmpty() {
       const formData = new FormData(document.form);
       const day = formData.get("day");
@@ -43,30 +45,28 @@ const labelYear = document.getElementById("label-y");
         labelMonth.style.display = "none"
         labelYear.style.display = "none"
 
-        redErrorDay.classList.remove("red-d");
-        redErrorMonth.classList.remove("red-m");
-        redErrorYear.classList.remove("red-y");
+        // redErrorDay.classList.remove("red-d");
+        // redErrorMonth.classList.remove("red-m");
+        // redErrorYear.classList.remove("red-y");
 
         return true;
       }
   return false;
 }
 
+
 //Getting current date
 function calculateAge(day , month , year) {
   const formData = new FormData(document.form);
-  const day = formData.get("day");
-  const month = formData.get("month");
-  const year = formData.get("year");
-
+  const birthDate = new Date(day, month -1, year);
   const currentDate = new Date();
 
   const currentDayOfMonth = currentDate.getDate();
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
-  const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  // const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  const year = currentYear - birthDate.getFullYear();
+  const year = currentYear - birthData.getFullYear();
   console.log(year);
   const month = currentMonth - birthDate.getMonth();
   console.log(month);
