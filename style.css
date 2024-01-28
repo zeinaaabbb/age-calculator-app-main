@@ -60,7 +60,7 @@ p {
 
 .red-d,
 .red-m,
-.red-y  {
+.red-y,  {
   color: var(--light-red);
 }
 

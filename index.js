@@ -28,28 +28,30 @@ const labelDay = document.getElementById("label-d");
 const labelMonth = document.getElementById("label-m");
 const labelYear = document.getElementById("label-y");
 
-    function correctDay (day) {
-      const lowerDay  = 1 ;
-      const upperDay = 31 ;
+    // function correctDay(day) {
+    //   const lowerDay  = 1 ;
+    //   const upperDay = 32 ;
 
-      if (day > 1 && day <31) {
-        console.log("in range");
-        return day
-      } else {
-        redErrorDay.classList.remove("red-d");
-        labelDay.style.display = "none";
-        return dayField.innerText
-
-      }
-    };
+    //   if (day >= lowerDay && day < upperDay) {
+    //     console.log(outputDays.innerText);
+    //     console.log(day.value);
+    //     outputDays.innerText = day.value.toString();
+    //   } else {
+    //     redErrorDay.classList.remove("red-d");
+    //     labelDay.style.display = "none";
+    //     return dayField.innerText
+    //   }
+    // };
 
 
     form.addEventListener("submit" , (event) => {
       event.preventDefault()
-      // console.log(day.value);
-      // console.log(month.value);
-      // console.log(year.value);
-      correctDay(day);
-      // console.log(dayEmpty.innerText);
-      // dayEmpty.innerText = day.value;
+      const formData = new FormData(event.target);
+      const day = Object.fromEntries(formData).day;
+      console.log(day);
+      const month = Object.fromEntries(formData).month;
+      console.log(month);
+      const year = Object.fromEntries(formData).year;
+      console.log(year);
+
 });
